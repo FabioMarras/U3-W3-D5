@@ -1,5 +1,4 @@
 import { Col, Row } from "react-bootstrap";
-
 import { useEffect, useState } from "react";
 import MainLinks from "./TopBar";
 import SearchedCardsContainer from "./SearchedCardsContainer";
@@ -57,8 +56,6 @@ const HomeMain = () => {
           <Row>
             <Col xs={10}>
               <div id="searchResults">
-                <h2 className="text-start">Search Results</h2>
-
                 <SearchedCardsContainer />
               </div>
             </Col>

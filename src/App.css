@@ -263,3 +263,9 @@ ul {
 .mainPage img {
   width: 200px;
 }
+
+.albumlist {
+  margin-left: 5%;
+  text-align: start;
+  padding-top: 3rem;
+}

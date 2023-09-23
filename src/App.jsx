@@ -7,6 +7,7 @@ import ArtistPage from "./components/ArtistPage";
 import AlbumPage from "./components/AlbumPage";
 import Footer from "./components/Footer";
 import LeftSidebar from "./components/LeftSidebar";
+import ArtistPageCopy from "./components/ArtistPageCopy";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Routes>
               <Route path="" element={<HomeMain />} />
               <Route path="/album/:id" element={<AlbumPage />} />
-              <Route path="/artist/:id" element={<ArtistPage />} />
+              <Route path="/artist/:id" element={<ArtistPageCopy />} />
             </Routes>
           </Row>
         </Container>

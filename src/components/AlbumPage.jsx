@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import TopBar from "./TopBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 const AlbumPage = () => {
   const paramams = useParams();
@@ -51,13 +53,14 @@ const AlbumPage = () => {
         </Col>
         <Col md={8} class="p-5">
           <Row>
-            <Col md={10} className="mb-5" id="trackList">
+            <Col md={10} className="mb-5 albumlist" id="trackList">
               {album.tracks && album.tracks.data && Array.isArray(album.tracks.data) ? (
                 album.tracks.data.map((track) => (
-                  <p className="text-white" key={track.id}>
+                  <p className="text-white d-flex justify-content-between" key={track.id}>
                     {track.title}
-                    <span>
-                      Time: {Math.floor(track.duration / 60)}:{(track.duration % 60).toString().padStart(2, "0")}
+                    <span className="ms-5">
+                      <FontAwesomeIcon icon={faClock} />
+                      {Math.floor(track.duration / 60)}:{(track.duration % 60).toString().padStart(2, "0")}
                     </span>
                   </p>
                 ))
