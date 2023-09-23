@@ -56,7 +56,7 @@ const ArtistPageCopy = () => {
           <Row className="mb-3">
             <Col xs={{ span: 10, offset: 1 }} className="p-0">
               <div className="mt-4 d-flex justify-content-start"></div>
-              <ArtistPageContainer tracks={tracks} />
+              <ArtistPageContainer name={artist.name} />
               <div className="pt-5 mb-5"></div>
             </Col>
           </Row>
